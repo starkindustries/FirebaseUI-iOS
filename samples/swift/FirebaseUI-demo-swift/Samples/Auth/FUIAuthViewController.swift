@@ -243,7 +243,7 @@ class FUIAuthViewController: UITableViewController {
   func getAllAccessTokens() -> String {
     var result = ""
     for provider in self.authUI!.providers {
-      result += (provider.shortName + ": " + provider.accessToken + "\n")
+        result += (provider.shortName + ": " + provider.accessToken! + "\n")
     }
 
     return result
@@ -252,7 +252,7 @@ class FUIAuthViewController: UITableViewController {
   func getAllIdTokens() -> String {
     var result = ""
     for provider in self.authUI!.providers {
-      result += (provider.shortName + ": " + (provider.idToken ?? "null")  + "\n")
+      result += (provider.shortName + ": " + ((provider.idToken ?? "null") ?? " null")  + "\n")
     }
 
     return result
