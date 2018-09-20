@@ -84,7 +84,8 @@ class ChatViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         // handling it depends on the context as well as your app's
         // capabilities, but this is usually a good place to
         // present "retry" and "forgot your password?" screens.
-        fatalError("Sign in failed: \(error.localizedDescription)")
+        print("Sign in failed: \(error.localizedDescription)")
+        return
       }
     }
 

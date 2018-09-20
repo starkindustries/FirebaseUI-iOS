@@ -243,7 +243,7 @@ class FUIAuthViewController: UITableViewController {
   func getAllAccessTokens() -> String {
     var result = ""
     for provider in self.authUI!.providers {
-        result += (provider.shortName + ": " + provider.accessToken! + "\n")
+        result += (provider.shortName + ": " + (provider.accessToken ?? "null") + "\n")
     }
 
     return result
